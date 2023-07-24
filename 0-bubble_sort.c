@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdbool.h>
 /**
  * bubble_sort - The function sorts array elements
  * from min to max value
@@ -10,7 +11,7 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t j, n;
 	int temp;
-	bool swapped = true;
+	bool swapped = 1;
 
 	if (!array || size < 2)
 		return;
@@ -18,7 +19,7 @@ void bubble_sort(int *array, size_t size)
 	n = size;
 	while (swapped)
 	{
-		swapped = false;
+		swapped = 0;
 		for (j = 1; j < n; j++)
 		{
 			if (array[j - 1] > array[j])
@@ -26,7 +27,7 @@ void bubble_sort(int *array, size_t size)
 				temp = array[j - 1];
 				array[j - 1] = array[j];
 				array[j] = temp;
-				swapped = true;
+				swapped = 1;
 				print_array(array, size);
 			}
 		}
