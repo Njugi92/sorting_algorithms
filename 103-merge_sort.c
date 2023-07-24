@@ -59,7 +59,7 @@ void TopDownMerge(int *source, int iBeg, int iMid, int iEnd, int *dest)
 	/*while there are elements in the right or left runs*/
 	for (l = iBeg; l < iEnd; l++)
 	{
-		/*if left run head exists and is <= existing right run head*/
+		/*left run head exists and is <= existing right run head*/
 		if (k < iMid && (j >= iEnd || source[k] <= source[j]))
 		{
 			dest[l] = source[k];
