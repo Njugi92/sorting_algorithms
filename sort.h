@@ -39,6 +39,10 @@ int iLeftChild(int i);
 void convertToHeap(int *array, size_t size);
 void shiftDown(int *array, size_t size, int start, int end);
 void radix_sort(int *array, size_t size);
+void init_bucket_count(int *bucket_count);
+void build_buckets(int *bucket_count, int **buckets);
+int find_max(int *array, size_t size);
+void into_array(int *array, size_t size, int **buckets, int *bucket_count);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
