@@ -1,6 +1,7 @@
 #include <stdbool.h>
 #include "sort.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * bitonic_compare - It is helper to bitonic_merge,
  * sorts content of current subarray.
