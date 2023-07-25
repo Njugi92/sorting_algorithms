@@ -2,6 +2,8 @@
 #define SORT_H
 
 #include <stdlib.h>
+#include <stdio.h>
+#include <stdbool.h>
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -44,6 +46,9 @@ void build_buckets(int *bucket_count, int **buckets);
 int find_max(int *array, size_t size);
 void into_array(int *array, size_t size, int **buckets, int *bucket_count);
 void bitonic_sort(int *array, size_t size);
+void bitonic_compare(bool up, int *x, size_t size);
+void bitonic_merge(bool up, int *x, size_t size, size_t orig_size);
+void bitonic_sort_r(bool up, int *x, size_t size, size_t orig_size);
 void quick_sort_hoare(int *array, size_t size);
 
 #endif
