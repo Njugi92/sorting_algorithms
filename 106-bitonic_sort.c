@@ -72,13 +72,13 @@ void bitonic_sort_r(bool up, int *x, size_t size, size_t orig_size)
 		return;
 	first = x;
 	second = x + (size / 2);
-	printf("Merging [%llu/%llu] (%s):\n", size, orig_size,
+	printf("Merging [%lu/%lu] (%s):\n", (unsigned long)size, (unsigned long)orig_size,
 			(up ? "UP" : "DOWN"));
 	print_array(x, size);
 	bitonic_sort_r(true, first, size / 2, orig_size);
 	bitonic_sort_r(false, second, size / 2, orig_size);
 	bitonic_merge(up, first, size, orig_size);
-	printf("Result [%llu/%llu] (%s):\n", size, orig_size,
+	printf("Result [%lu/%lu] (%s):\n", (unsigned long)size, (unsigned long)orig_size,
 			(up ? "UP" : "DOWN"));
 	print_array(x, size);
 }
